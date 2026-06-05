@@ -1118,6 +1118,113 @@ main {
   background: var(--orange-yellow-crayola);
 }
 
+.marker-highlight {
+  color: var(--white-2);
+  display: inline;
+  padding: 0 5px 1px;
+  background:
+    linear-gradient(
+      transparent 44%,
+      hsla(45, 47%, 60%, 0.46) 44%,
+      hsla(45, 38%, 58%, 0.46) 88%,
+      transparent 88%
+    );
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  text-shadow: 0 0 8px hsla(45, 100%, 72%, 0.12);
+}
+
+.reading-timeline {
+  display: grid;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.reading-timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 86px;
+  width: 1px;
+  background: var(--jet);
+}
+
+.reading-timeline-item {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 34px;
+  position: relative;
+}
+
+.reading-timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 80px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--orange-yellow-crayola);
+  border-radius: 50%;
+  background: var(--eerie-black-1);
+  box-shadow: 0 0 0 4px var(--eerie-black-1);
+  z-index: 1;
+}
+
+.reading-timeline-item.is-current::before {
+  background: var(--orange-yellow-crayola);
+  box-shadow:
+    0 0 0 4px var(--eerie-black-1),
+    0 0 18px hsla(45, 100%, 72%, 0.32);
+}
+
+.reading-date {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  line-height: 1.45;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.reading-date span {
+  display: block;
+}
+
+.reading-entry {
+  min-width: 0;
+}
+
+.reading-entry h4 {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.reading-entry p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.55;
+}
+
+.reading-status {
+  display: inline-block;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.reading-entry .book-list {
+  gap: 10px;
+}
+
 
 
 /*-----------------------------------*\
