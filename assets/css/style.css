@@ -1135,7 +1135,8 @@ main {
   transition: opacity var(--transition-1), transform var(--transition-1), visibility var(--transition-1);
   visibility: hidden;
   width: max-content;
-  z-index: 3;
+  z-index: 50;
+  
 }
 
 .framework-panel li {
@@ -1178,6 +1179,7 @@ main {
   pointer-events: auto;
   transform: translateY(0);
   visibility: visible;
+  
 }
 
 
